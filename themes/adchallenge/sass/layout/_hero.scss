@@ -1,0 +1,82 @@
+#block-top-content-header {
+    margin-top: -10%;
+    position: relative;
+    width: 100%;
+    padding-top: 49.051490514%; /* aspect ratio of the image */
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-bottom: pxToRem(100);
+    min-height: 300px;
+}
+#challenge-home {
+    // background-color: palegoldenrod;
+    position: absolute;
+    top: 35%;
+    bottom: 35%;
+    left: 0%;
+    right: 0%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+
+    h2 {
+        font-size: $h2_font_size;
+        color: $white;
+        font-weight: $light_font_weight;
+        padding-bottom: pxToRem(30);
+        margin-bottom: pxToRem(10);       
+        border-bottom: 1.5px solid rgba(255, 255, 255, .4);
+
+    }
+
+    .field--type-text-with-summary h1 {
+        font-weight: $thin_font_weight;
+        color: $white;
+        font-size: pxToRem(64);
+        margin-top: 0;
+        padding-top: 0;
+        margin-bottom: pxToRem(50);
+    }
+
+    .field--type-text-with-summary h1>strong {
+        font-weight: $medium_font_weight;
+    }
+
+    .field--name-field-link.field--type-link.field--label-hidden.field__item {
+        background-color: $light_red;
+        border-radius: 5px;
+        margin-bottom: 0;
+
+        a {
+            font-weight: $medium_font_weight;
+            font-size: pxToRem(14);
+            line-height: pxToRem(16);
+            color: $white;
+            text-decoration: none;
+            text-transform: uppercase;
+
+            text-align: center;
+            display: block;
+            padding-left: pxToRem(55);
+            padding-right: pxToRem(55);
+            padding-top: pxToRem(15);
+            padding-bottom: pxToRem(15);
+        }
+    }
+}
+
+@media screen and (max-width:pxToEm(1400)) {
+    #challenge-home {       
+        top: 40%;
+        bottom: 25%;      
+    }
+}
+@media screen and (max-width: pxToEm(110)) {
+    #challenge-home {       
+        top: 40%;
+        bottom: 25%;      
+    }
+}

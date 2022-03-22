@@ -1,0 +1,107 @@
+#block-adchallenge-content {    
+    margin-left: $margin_left_right;
+    margin-right: $margin_left_right;
+    margin-bottom: pxToRem(50);
+
+    >h2 {
+        position: relative;
+        @include section-heading-typography;
+        padding-bottom: pxToRem(15);
+    }
+
+    >h2::after {
+        @include partialUnderlineForSectionHeading(6rem);
+    }
+
+    .views-element-container {
+        .view-content {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+
+            .views-row {
+                // display: inline-block;
+                flex-basis: 30%;               
+            }
+
+            article {
+                .image-style-article-teaser {
+                    width: 100%;
+                    height: auto
+                }
+            }
+        }
+
+        article>h2>a {
+            @include news-title-typography;
+
+        }
+
+        .createdDate {
+            @include news-date-typography;
+            margin-bottom: pxToRem(20);
+        }
+
+        .node__content p {
+            @include news-preview-content-typography;
+
+        }
+
+        .node-readmore>a {
+            position: relative;
+            @include readMore-typography;
+            float: left;
+            display: flex;
+            align-items: baseline;
+            justify-items: center;
+        }
+        .node-readmore>a::before {
+            content:"";
+            display: inline-block;
+             width: 0.15rem;
+            height: pxToRem(7);
+            background-color:$bondi_blue;
+            position: absolute;
+            top: pxToRem(3.5);
+            right:pxToRem(-7);
+            transform: rotate(-45deg);
+        }
+        .node-readmore>a::after {
+            content:"";
+            display: inline-block;
+             width: 0.15rem;
+            height: pxToRem(7);
+            background-color:$bondi_blue;
+            position: absolute;
+            bottom: pxToRem(2.5);
+            right:pxToRem(-7);
+            transform: rotate(45deg);      
+        }
+        .node-readmore>a:hover:before,.node-readmore>a:hover:after{
+            background-color: $light_red;
+        }
+
+    }
+
+    .image-style-article-teaser {
+        width: 80%;        
+        height: auto;
+    }
+
+}
+
+@media screen and (max-width: pxToEm(700)) {
+    #block-adchallenge-content {
+        .views-element-container {
+            .view-content {
+                flex-direction: column;
+
+                .views-row {
+                    margin-bottom: 2rem;
+                }
+
+            }
+        }
+        
+    }
+}

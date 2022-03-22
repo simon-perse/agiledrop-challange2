@@ -1,0 +1,16 @@
+
+//MIXINS
+  @mixin partialUnderlineForSectionHeading($length)
+  { 
+    content : "";
+    position: absolute;
+    left    : 0;
+    bottom  : 0;
+    height  : 1px;
+    width   : $length;
+    border-bottom:pxToRem(3) solid $bondi_blue;
+  
+  }
+
+
+
